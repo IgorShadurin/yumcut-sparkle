@@ -79,8 +79,8 @@ export const ControlPanel: React.FC<ControlPanelProps> = ({
       <h2 className="text-xl font-bold mb-4 border-b border-gray-700 pb-2">Sparkle Settings</h2>
       <ControlSlider label="Amount" value={settings.amount} min={10} max={500} step={10} onChange={handleSettingChange('amount')} />
       <ControlSlider label="Speed" value={settings.speed} min={0.1} max={5} step={0.1} onChange={handleSettingChange('speed')} />
-      <ControlSlider label="Min Size" value={settings.minSize} min={0.5} max={5} step={0.1} onChange={handleSettingChange('minSize')} />
-      <ControlSlider label="Max Size" value={settings.maxSize} min={0.5} max={10} step={0.1} onChange={handleSettingChange('maxSize')} />
+      <ControlSlider label="Min Size" value={settings.minSize} min={0.5} max={50} step={0.1} onChange={handleSettingChange('minSize')} />
+      <ControlSlider label="Max Size" value={settings.maxSize} min={0.5} max={100} step={0.1} onChange={handleSettingChange('maxSize')} />
       <ControlSlider label="Direction Angle" value={settings.directionAngle} min={-180} max={180} step={1} onChange={handleSettingChange('directionAngle')} />
       
       <div className="mb-6">

@@ -8,16 +8,16 @@ import { VideoIcon } from './components/Icons';
 function App() {
   const [settings, setSettings] = useState<SparkSettings>({
     amount: 150,
-    speed: 1,
-    minSize: 1,
-    maxSize: 3,
+    speed: 3,
+    minSize: 24,
+    maxSize: 30,
     color: '#FFFFFF',
-    directionAngle: -90, // Fly upwards
+    directionAngle: -55, // Fly upwards
   });
-  const [videoDuration, setVideoDuration] = useState<number>(5);
-  const [aspectRatio, setAspectRatio] = useState<AspectRatio>('16:9');
+  const [videoDuration, setVideoDuration] = useState<number>(20);
+  const [aspectRatio, setAspectRatio] = useState<AspectRatio>('9:16');
   const [format, setFormat] = useState<VideoFormat>('png-sequence');
-  const [resolution, setResolution] = useState<Resolution>('1080p');
+  const [resolution, setResolution] = useState<Resolution>('2160p');
   const [fps, setFps] = useState<number>(60);
   
   const [isGenerating, setIsGenerating] = useState<boolean>(false);
