@@ -1,0 +1,7 @@
+{
+  "name": "Sparkle Video Generator",
+  "description": "Create and customize flying sparkle animations and export them as videos with a transparent background. Adjust amount, speed, direction, and aspect ratio to generate the perfect effect for your projects.",
+  "requestFramePermissions": [
+    "fileSystem"
+  ]
+}
