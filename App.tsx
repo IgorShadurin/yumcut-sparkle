@@ -16,7 +16,7 @@ function App() {
   });
   const [videoDuration, setVideoDuration] = useState<number>(20);
   const [aspectRatio, setAspectRatio] = useState<AspectRatio>('9:16');
-  const [format, setFormat] = useState<VideoFormat>('png-sequence');
+  const [format, setFormat] = useState<VideoFormat>('webm-transparent');
   const [resolution, setResolution] = useState<Resolution>('2160p');
   const [fps, setFps] = useState<number>(60);
   
@@ -105,7 +105,7 @@ function App() {
           />
         </aside>
         
-        <section className="min-h-[50vh] lg:min-h-0 flex items-center justify-center bg-black rounded-lg shadow-inner overflow-hidden relative">
+        <section className="min-h-[50vh] lg:min-h-0 flex items-start justify-center bg-black rounded-lg shadow-inner overflow-hidden relative py-2">
            <SparkCanvas settings={settings} aspectRatio={aspectRatio} format={format} />
            <div className="absolute bottom-2 right-3 bg-black/50 text-white/80 px-2 py-1 rounded text-xs font-mono">
             {resolutionText}
