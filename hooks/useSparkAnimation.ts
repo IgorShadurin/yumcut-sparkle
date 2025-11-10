@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import type { Spark, SparkSettings } from '../types';
 
 export const useSparkAnimation = (

@@ -158,7 +158,34 @@ export const ControlPanel: React.FC<ControlPanelProps> = ({
           </div>
         </>
       )}
-      
+
+      {/* FFmpeg Command Section */}
+      {format === 'png-sequence' && (
+        <div className="mb-6">
+          <h3 className="text-lg font-semibold mb-3 text-gray-300">Convert PNG Sequence to Video</h3>
+          <div className="bg-gray-800 border border-gray-600 rounded-lg p-3">
+            <p className="text-xs text-gray-500 mb-2">Copy this command to convert your PNG sequence to video:</p>
+            <div className="relative">
+              <pre className="text-xs font-mono text-cyan-300 bg-gray-900 p-3 rounded border border-gray-600 overflow-x-auto whitespace-pre-wrap break-all">
+{`ffmpeg -y -framerate ${fps} -start_number 0 -i "path/to/your/frames/frame_%05d.png" -c:v prores_ks -profile:v 4 -pix_fmt yuva444p10le -alpha_bits 16 -an "output/sparkles.mov"`}
+              </pre>
+              <button
+                onClick={() => {
+                  navigator.clipboard.writeText(`ffmpeg -y -framerate ${fps} -start_number 0 -i "path/to/your/frames/frame_%05d.png" -c:v prores_ks -profile:v 4 -pix_fmt yuva444p10le -alpha_bits 16 -an "output/sparkles.mov"`);
+                }}
+                className="absolute top-2 right-2 bg-purple-600 hover:bg-purple-700 text-white text-xs px-2 py-1 rounded transition-colors"
+                title="Copy to clipboard"
+              >
+                Copy
+              </button>
+            </div>
+            <p className="text-xs text-gray-500 mt-2">
+              Replace <code className="bg-gray-700 px-1 rounded">path/to/your/frames</code> with your actual frames directory path.
+            </p>
+          </div>
+        </div>
+      )}
+
       <div className="mt-auto relative" title={isGenerateDisabled && !isGenerating ? "Direct Save requires a browser that supports the File System Access API, like Chrome." : ""}>
         <button
           onClick={onGenerate}
