@@ -38,3 +38,7 @@ If you are browsing the repo UI, there’s a sample sparkle loop playing on the 
 We’re continuing to study how people actually use sparkle overlays so we can add presets, lighten the UI wording even more, and keep the creative path as human-friendly as possible. Reach out if you try it somewhere interesting—we’d love to see it in action.
 
 #sparklevideo #transparentvideo #webmfootage #sparkleoverlay #freeassets #motiongraphics #contentcreator #videoloop #overlaypack #sparkleeffect
+
+---
+
+Try [YumCut](https://yumcut.com)! This is an AI video generator that turns a single prompt into a ready-to-post vertical short video in minutes. It creates the script, images, voice-over, subtitles, and edits everything into a final clip automatically. It’s built for fast testing and making lots of variations without spending hours in an editor.
